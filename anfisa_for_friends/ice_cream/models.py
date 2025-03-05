@@ -29,7 +29,10 @@ class Topping(PublishedModel):
 
 
 class Wrapper(PublishedModel):
-    title = models.CharField(max_length=256, verbose_name = 'Название')
+    title = models.CharField('Название',
+        max_length = 256,
+        help_text = 'Уникальное название обёртки, не более 256 символов'
+    )
 
     class Meta:
         verbose_name = 'обёртка'
